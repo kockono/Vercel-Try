@@ -26,7 +26,8 @@ app.use("/api/users", user_router_1["default"]);
 app.use("/api/orders", order_router_1["default"]);
 app.use(express_1["default"].static('public'));
 app.get('*', function (req, res) {
-    res.sendFile(path_1["default"].join(__dirname, 'public', 'index.html'));
+    // res.sendFile(path_1["default"].join(__dirname, 'public', 'index.html'));
+    res.send({ Hola: 'Hola Mundo'});
 });
 // Puerto en el que va correr mi servidor
 // process.env.PORT Asigname el puerto que tengas libre en el HOST

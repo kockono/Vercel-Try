@@ -6,7 +6,7 @@ exports.__esModule = true;
 var dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1["default"].config();
 var path_1 = __importDefault(require("path"));
-var cors_1 = __importDefault(require("cors"));
+var cors = __importDefault(require("cors"));
 var food_router_1 = __importDefault(require("./routers/food.router"));
 var user_router_1 = __importDefault(require("./routers/user.router"));
 var order_router_1 = __importDefault(require("./routers/order.router"));
@@ -16,7 +16,7 @@ var express_1 = __importDefault(require("express"));
 // Configuracion del server
 var app = (0, express_1["default"])();
 app.use(express_1["default"].json()); // Acepte peticiones de JSON
-app.use(cors());
+app.use(cors["default"]());
 
 // Final de configuracion del server
 // http://localhost:5000/api/foods ES MI RUTA PADRE

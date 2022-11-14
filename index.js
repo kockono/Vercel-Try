@@ -16,10 +16,9 @@ var express_1 = __importDefault(require("express"));
 // Configuracion del server
 var app = (0, express_1["default"])();
 app.use(express_1["default"].json()); // Acepte peticiones de JSON
-app.use((0, cors_1["default"])({
-    credentials: true,
-    origin: ["http://localhost:4200"] // Aquí van los puertos que puedo aceptar peticioness
-})); // Final de configuracion del server
+app.use(cors());
+
+// Final de configuracion del server
 // http://localhost:5000/api/foods ES MI RUTA PADRE
 app.use("/api/foods", food_router_1["default"]); // foodRouter, Rutas hijas y controladores
 app.use("/api/users", user_router_1["default"]);
